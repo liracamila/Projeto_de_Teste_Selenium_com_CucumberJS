@@ -4,6 +4,6 @@ Feature: Verificar anuncio existente
 	Para encontrar um servico
 
 Scenario: Pesquisar um anuncio de servico
-    Given que o usuario esteja pagina principal
+    Given que o usuario esteja na pagina principal
     When o usuario pesquisa um servico
     Then sao exibidos os servicos cadastrados na plataforma

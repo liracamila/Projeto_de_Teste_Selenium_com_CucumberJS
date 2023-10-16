@@ -11,11 +11,12 @@ var options   = new chrome.Options().headless();
 let driver = new webdriver.Builder()
     .forBrowser('chrome')
     .withCapabilities(webdriver.Capabilities.chrome())
-    //.setChromeOptions(options)
+    .setChromeOptions(options)
     .build();
 
-    Given('que o usuario esteja pagina principal', {timeout: 30 * 1000}, async () => { 
-        await driver.get("http://publicazo.insprak.com/")
+
+    Given('que o usuario esteja na pagina principal', {timeout: 30 * 1000}, async () => { 
+        await driver.get('http://publicazo.insprak.com/')
         await driver.manage().window().setRect({ width: 1050, height: 700 })
         });
 
